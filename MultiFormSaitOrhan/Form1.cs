@@ -69,5 +69,22 @@ namespace MultiFormSaitOrhan
             }
             dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        //Form1/Properties/KeyPreview must be "True"
+        {
+            if (e.Control && e.KeyCode == Keys.D)
+            {
+                btnAdd_Click(null, null);
+            }
+            else if (e.Control && e.KeyCode == Keys.U)
+            {
+                btnUpdate_Click(null, null);
+            }
+            else if (e.Control && e.KeyCode == Keys.Delete)
+            {
+                btnDelete_Click(null, null);
+            }
+        }
     }
 }
